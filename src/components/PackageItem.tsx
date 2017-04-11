@@ -23,7 +23,7 @@ export class PackageItem extends React.Component<PackageItemProps, PackageItemSt
 
     onItemContainerClicked() {
         this.props.setSelection(this.props.index);
-        console.log("Clicked: " + this.props.index);
+        // console.log("Clicked: " + this.props.index);
     }
 
     render() {
@@ -33,6 +33,7 @@ export class PackageItem extends React.Component<PackageItemProps, PackageItemSt
         let selectedStyle = "ItemContainer ";
         selectedStyle += this.props.selected ? "ItemContainerSelected" : "ItemContainerBg";
 
+        /* //description
         if (description.length > 140) {
             toggle = "[collapse]";
 
@@ -40,21 +41,20 @@ export class PackageItem extends React.Component<PackageItemProps, PackageItemSt
                 description = description.substr(0, 140) + "..."; 
                 toggle = "[expand]";
             }
-        }
+        }*/
 
         return (
             <div className={selectedStyle} onClick={this.onItemContainerClicked.bind(this)}>
                 <div className="ItemLeftPanel">
-                    <img className="PackageIcon" src="/resources/icons/package.png" />
+                    <img src="/src/resources/icons/package.png" />
                 </div>
                 <div className="ItemRightPanel">
                     <div className="PackageCaption">
-                        <span className="PackageName">{pkg.name}</span>
-                        <span className="PackageVersion">{pkg.versions[0].version}</span><br />
-                        <span className="PackageAuthor">by {pkg.maintainers[0].username}</span>
+                        <span className="ItemPackageName">{pkg.name}</span>
+                        <span className="ItemPackageVersion">{pkg.versions[0].version}</span><br />
+                        <span className="ItemPackageAuthor">by {pkg.maintainers[0].username}</span>
                     </div>
-                    <div className="PackageDescription">{description}</div>
-                    <div className="ToggleDescription" onClick={this.toggleExpandState}>{toggle}</div>
+                    <div className="ItemToggleDescription" onClick={this.toggleExpandState}>{toggle}</div>
                 </div>
             </div>
         );
