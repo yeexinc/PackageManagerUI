@@ -31,9 +31,7 @@ export class StarRating extends React.Component<StarRatingProps, undefined>
 
         // Display stars on the page
         return (
-            <div className="StarRating" >
-                <div className="Stars">{stars}</div>
-            </div>
+            <div className="StarRating">{stars}</div>
         )
     }
 }
