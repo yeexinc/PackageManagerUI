@@ -1,8 +1,8 @@
-
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import { TabComponent } from "./components/TabComponent";
+import {PackageDetail} from "./components/packageDetail";
 
 export interface TabControlConfig {
     htmlElementId: string
@@ -16,3 +16,9 @@ export class TabControl {
     }
 
 }
+
+let dependencies : string[] = ["qux", "quz"];
+
+ReactDOM.render(
+    <PackageDetail changeLog="foo" content="bar" dependencies={dependencies}/>,
+    document.getElementById("packageDetailPlaceHolder"));
