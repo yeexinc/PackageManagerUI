@@ -33,6 +33,7 @@ export class TabHeader extends React.Component<TabHeaderProps, TabHeaderState> {
         let idx = -1;
         let icons = this.props.iconUrls.map((item)=>{
             //this.setState({selectionIndex:idx++});
+            idx++;
             return (
                 <div className="Tab" onClick={this.tabClicked}>
                 <img src={item} width="50%" height="auto"/>
