@@ -42,6 +42,11 @@ body {
     font-family: 'Open Sans';
     display:flex;
     border: 1px solid #aaa;
+    flex-direction: column; 
+}
+
+.VersionBar {
+    flex-direction: row;
 }
 
 .VersionContainer div {
@@ -55,8 +60,9 @@ body {
     border-bottom: #888 1px solid;
 }
 
-.Detail {
+.PackageDetailContainer {
     margin: 10px 0px;
+    flex-direction: column;
 }
 
 .PackageHeaderInfoRightPanel
