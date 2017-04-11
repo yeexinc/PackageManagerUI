@@ -36,14 +36,15 @@ export class PackageVersion extends React.Component<PackageVersionProps, Package
             return <div></div>;
         }
         let versions = null;
-        if (this.props.pkg.versions) { versions = this.props.pkg.versions; }
-
+        if (this.props.pkg.versions) { 
+            versions = this.props.pkg.versions;
+        }
         let selectedVersion = versions[this.state.selectedVerIndex];
         let change_log = selectedVersion.change_log;
         let content = selectedVersion.content;
         let deps: string[] = selectedVersion.full_dependency_ids.map((dep: any) => dep.name);
         let packageDetail: JSX.Element =
-            <PackageVersionDetail changeLog={change_log} content={content} dependencies={deps} />
+            <PackageVersionDetail changeLog={change_log} content={content} dependencies={deps} />;
         let options: JSX.Element[] = [];
 
         if (versions) {
