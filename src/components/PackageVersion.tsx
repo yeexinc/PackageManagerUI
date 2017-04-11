@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {InstallButtons} from './InstallButtons';
-import {PackageDetail} from "./PackageDetail"
+import {PackageVersionDetail} from "./PackageVersionDetail"
 
 export interface PackageVersionProps { pkg: any }
 export interface PackageVersionStates { selectedVerIndex: number }
@@ -43,7 +43,7 @@ export class PackageVersion extends React.Component<PackageVersionProps, Package
             let content = selectedVersion.content;
             let deps : string[] = selectedVersion.full_dependency_ids.map((dep:any) => dep.name);
             let packageDetail : JSX.Element = 
-                <PackageDetail changeLog={change_log} content={content} dependencies={deps}/>
+                <PackageVersionDetail changeLog={change_log} content={content} dependencies={deps}/>
 
             return (
             <div className="VersionContainer">
