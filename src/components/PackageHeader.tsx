@@ -14,14 +14,22 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
 
         return (
             <div className="PackageHeaderInfo">
-                <div className="PakcageIcon">
-                    <img className="PackageIcon" src="/resources/icons/package.png"/>
+                <div className="PackageHeaderInfoLeftPanel">
+                    <div className="PackageIcon">
+                        <img className="PackageIcon" src="./src/resources/icons/package.png"/>
+                    </div>
                 </div>
-                <div className="PackageName">{pkg.name}</div>
-                <div className="PackageRating">5</div>
-                <i className="fa fa-download"></i>
-                <div className="PackageDownload">{pkg.downloads}</div>
-                <div className="PackageDescription">{pkg.description}</div>
+                    <div className="PackageHeaderInfoRightPanel">
+                    <div className="PackageName">{pkg.name}</div>
+                    <div className="PackageRating">
+                        <i className="fa fa-star-o" />
+                        5
+                    </div>
+                    <div className="PackageDownload">
+                        <i className="fa fa-download" />
+                        {pkg.downloads}
+                    </div>
+                </div>
             </div>
         );
     }
