@@ -14,8 +14,6 @@ export class PackageList extends React.Component<PackageListProps, PackageListSt
         this.state = { selectedIndex: -1, packageJsonDownloaded: false };
         this.setSelection = this.setSelection.bind(this);
         this.beginDownloadPackage = this.beginDownloadPackage.bind(this);
-
-        console.log("Setting up package list...");
         this.beginDownloadPackage();
     }
 
@@ -28,7 +26,6 @@ export class PackageList extends React.Component<PackageListProps, PackageListSt
                 return response.text();
 
             }).then(function (jsonString) {
-
                 thisObject.activePackageJson = JSON.parse(jsonString);
                 thisObject.setState({ packageJsonDownloaded: true });
             });
@@ -53,6 +50,6 @@ export class PackageList extends React.Component<PackageListProps, PackageListSt
         // );
 
         // return (<div>{packageElements}{pkgVersion}{pkgDetails}</div>);
-        return (<div>Yeexin here</div>);
+        return (<div>(Render Package items here)</div>);
     }
 }
