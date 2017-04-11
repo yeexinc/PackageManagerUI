@@ -1,6 +1,7 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { SearchBar } from "./SearchBar";
 import { PackageList } from './PackageList';
 
 export class TabComponent extends React.Component<undefined, undefined> {
@@ -14,7 +15,11 @@ export class TabComponent extends React.Component<undefined, undefined> {
     }
 
     render() {
-        return (<PackageList />);
+        return (
+            <div>
+                <SearchBar />
+                <PackageList />
+            </div>);
     }
 
 }
