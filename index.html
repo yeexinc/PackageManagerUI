@@ -18,10 +18,25 @@
 <body>
     <link rel="stylesheet" href="./src/resources/packageManagerStyle.css" />
 
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+
+    <script src='./dist/bundle.js'></script>
+
     <div class="OuterMostContainer">
         <div id="leftContentPlaceholder" class="LeftContainer">This space will host lib/pm</div>
         <div id="rightContentPlaceholder" class="RightContainer">This will be the detailed space</div>
     </div>
+
+    <script>
+        let configuration = {
+            htmlElementId: "leftContentPlaceholder"
+        };
+
+        let tabControl = new PackageManagerEntryPoint.TabControl(configuration);
+        tabControl.insertTab("Library", null);
+        tabControl.insertTab("Packages", null);
+    </script>
 
 </body>
 
