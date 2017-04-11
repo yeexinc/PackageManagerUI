@@ -47,13 +47,30 @@ body {
     padding: 5px;
 }
 
+.PackageHeaderInfo {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: #888 1px solid;
+}
+
+.Detail {
+    margin: 10px 0px;
+}
+
+.PackageHeaderInfoRightPanel
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.PackageName {
+    font-size: 18pt;
+}
+
 .DetailSectionHeader {
-    margin: 6px 0px;
+    margin: 18px 0px 6px 0px;
     font-size: 11pt;
     text-transform: uppercase;
     color: #888;
-}
-
-.DetailSection {
-    margin-bottom: 21px;
 }
