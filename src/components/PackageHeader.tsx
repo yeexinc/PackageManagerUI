@@ -30,6 +30,7 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
                 <div className="PackageDownload">
                     <i className="fa fa-download" />
                     {pkg.downloads}
+                    ({pkg.votes}<i className="fa fa-users"/>)
                 </div>
                 <div className="PackageDescription">{pkg.description}</div>
             </div>
