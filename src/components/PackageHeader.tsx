@@ -35,28 +35,30 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
         //console.log(links);
 
         return (
-            <div className="PackageHeaderInfo">
-                <div className="PackageHeaderInfoLeftPanel">
-                    <div className="PackageIcon">
-                        <img className="PackageIcon" src="./dist/resources/icons/package.png" />
+            <div className="PackageHeaderWrapper">
+                <div className="PackageHeaderInfo">
+                    <div className="PackageHeaderInfoLeftPanel">
+                        <div className="PackageIcon">
+                            <img className="PackageIcon" src="./dist/resources/icons/package.png" />
+                        </div>
+                    </div>
+                    <div className="PackageHeaderInfoRightPanel">
+                        <div className="PackageName">{pkg.name}</div>
+                        <div className="PackageAuthor">by {pkg.maintainers[0].username}</div>
+                        <div className="PackageCrumbles">
+                            <div className="AlignLeft">
+                                {starRating}&nbsp;
+                                ({pkg.votes}&nbsp;<i className="fa fa-users"/>)
+                            </div>
+                            <div className="AlignLeft">
+                                <i className="fa fa-download" />&nbsp;
+                                {pkg.downloads}&nbsp;
+                            </div>
+                            <div className="AlignRight">{site}{separator}{repo}</div>
+                        </div>
                     </div>
                 </div>
-                <div className="PackageHeaderInfoRightPanel">
-                    <div className="PackageName">{pkg.name}</div>
-                    <div className="PackageAuthor">by {pkg.maintainers[0].username}</div>
-                    <div className="PackageCrumbles">
-                        <div className="AlignLeft">
-                            {starRating}&nbsp;
-                            ({pkg.votes}&nbsp;<i className="fa fa-users"/>)
-                        </div>
-                        <div className="AlignLeft">
-                            <i className="fa fa-download" />&nbsp;
-                            {pkg.downloads}&nbsp;
-                        </div>
-                        <div className="AlignRight">{site}{separator}{repo}</div>
-                    </div>
-                </div>
-                
+                <div className="PackageDescription">{pkg.description}</div>
             </div>
         );
     }
