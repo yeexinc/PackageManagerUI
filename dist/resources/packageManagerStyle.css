@@ -24,14 +24,20 @@ a {
     align-content: stretch;
 }
 
+.InstallButtonGroup {
+    display: flex;
+    flex-direction: row;
+}
+
 .InstallButtons {
     flex-grow: 1;
     display: inline-block;
-    height: 12pt;
+    width: 100px;
+    height: 25px;
     background: #3f5a97;
-    margin: 1pt;
     text-align: center;
-    font-size:9pt;
+    vertical-align: middle;
+    font-size: 11pt;
 }
 
 .LeftContainer {
@@ -124,18 +130,23 @@ a {
 .VersionBar {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    border-bottom: #888 1px solid;
 }
 
-.VersionBar div {
+.VersionBarInfo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /*border-bottom: #888 1px solid;*/
+}
+
+.VersionBarInfo .VersionBarColumn {
     flex-grow: 1;
 }
 
 .PackageHeaderInfo {
     display: flex;
     flex-direction: row;
-    padding-bottom: 10px;
+    padding-Fottom: 10px;
     border-bottom: #888 1px solid;
 }
 

@@ -16,7 +16,7 @@ export class InstallButtons extends React.Component<InstallButtonsProps, Install
 
     constructor(props: InstallButtonsProps) {
         super(props);
-        this.state = { installed: false, hasUpdate: false};
+        this.state = { installed: false, hasUpdate: true};
 
         this.installPackage = this.installPackage.bind(this);
         this.updatePackage = this.updatePackage.bind(this);
@@ -40,7 +40,7 @@ export class InstallButtons extends React.Component<InstallButtonsProps, Install
             return (<div><div className="InstallButtons" onClick={ this.installPackage }>INSTALL</div></div>);
         }
         else {
-            return (<div>
+            return (<div className="InstallButtonGroup">
                         <div className="InstallButtons" onClick={ this.uninstallPackage }>UNINSTALL</div>
                         <div  className="InstallButtons" onClick={ this.updatePackage } hidden={!this.state.hasUpdate}>UPDATE</div>
                     </div>);
