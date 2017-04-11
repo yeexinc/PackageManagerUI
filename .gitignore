@@ -1,3 +1,6 @@
+# Distributables
+dist/
+
 # Logs
 logs
 *.log
