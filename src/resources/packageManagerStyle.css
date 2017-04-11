@@ -9,6 +9,12 @@
     align-content: stretch;
 }
 
+.InstallButtons {
+    flex-grow: 1;
+    width: 100%;
+    background: cornflowerblue;
+}
+
 .LeftContainer {
     background: cornflowerblue;
 }
