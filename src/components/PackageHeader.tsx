@@ -13,9 +13,26 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
     render() {
         let pkg = this.props.pkg;
         let rate = 4.6;
+
         let site = <a href={pkg.site_url}>Website</a>;
-        let repo = <a href={pkg.repository_url}>Repo</a>;
+        if (pkg.site_url === "") site = undefined;
+        
+        let repo = <a href={pkg.repository_url}>Repository</a>;
+        if (pkg.repository_url === "") repo = undefined;
+
+        let separator = (pkg.site_url === "" || pkg.repository_url === "") ? "" : " | ";
+        
         let starRating = <StarRating rate={rate} />;
+
+        //let urlLink = (pkg.site_url !== "") ? (<a href={pkg.site_url}>Website</a>) : "";
+        //let repoLink = (pkg.repository_url !== "") ? (<a href={pkg.repository_url}>Repo</a>) : "";
+        //let separator = (pkg.site_url !== "" && pkg.repository_url !== "") ? " | " : "";
+        //let links = urlLink + separator + repoLink;
+
+        //console.log(urlLink);
+        //console.log(repoLink);
+        //console.log(separator);
+        //console.log(links);
 
         return (
             <div className="PackageHeaderInfo">
@@ -26,17 +43,20 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
                 </div>
                 <div className="PackageHeaderInfoRightPanel">
                     <div className="PackageName">{pkg.name}</div>
+                    <div className="PackageAuthor">by {pkg.maintainers[0].username}</div>
+                    <div className="PackageCrumbles">
+                        <div className="AlignLeft">
+                            {starRating}&nbsp;
+                            ({pkg.votes}&nbsp;<i className="fa fa-users"/>)
+                        </div>
+                        <div className="AlignLeft">
+                            <i className="fa fa-download" />&nbsp;
+                            {pkg.downloads}&nbsp;
+                        </div>
+                        <div className="AlignRight">{site}{separator}{repo}</div>
+                    </div>
                 </div>
-                <div className="PackageName">{pkg.name}</div>
-                <div className="PackageAuthor">by {pkg.maintainers[0].username}</div>
-                {starRating}
-                <div className="PackageDownload">
-                    <i className="fa fa-download" />
-                    {pkg.downloads}
-                    ({pkg.votes}<i className="fa fa-users"/>)
-                </div>
-                <div className="PackageDescription">{pkg.description}</div>
-                <div>{site} | {repo}</div>
+                
             </div>
         );
     }
