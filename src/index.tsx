@@ -17,8 +17,16 @@ export class TabControl {
 
 }
 
-let dependencies : string[] = ["qux", "quz"];
+fetch("/package/583d8ad8fdef23aa6e000037")
+    .then(function (response: Response) {
+        return response.text();
+    }).then(function (jsonString) {
 
-ReactDOM.render(
-    <PackageDetail changeLog="foo" content="bar" dependencies={dependencies}/>,
-    document.getElementById("packageDetailPlaceHolder"));
+        let completeJson = JSON.parse(jsonString);
+        let dependencies : string[] = ["qux", "quz"];
+
+        ReactDOM.render(
+            <PackageDetail changeLog="foo" content={completeJson.content} dependencies={dependencies}/>,
+            document.getElementById("packageDetailPlaceHolder")
+        );
+});
