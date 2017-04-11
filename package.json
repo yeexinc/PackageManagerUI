@@ -1,0 +1,43 @@
+{
+  "name": "dynamo-package-manager-ui",
+  "version": "1.0.0",
+  "description": "Dynamo Pakcage Manager UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DynamoDS/PackageManagerUI.git"
+  },
+  "keywords": [
+    "Dynamo",
+    "Package",
+    "Manager"
+  ],
+  "author": "DynamoDS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DynamoDS/PackageManagerUI/issues"
+  },
+  "homepage": "https://github.com/DynamoDS/PackageManagerUI#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "@types/react": "^15.0.21",
+    "@types/react-dom": "^0.14.23",
+    "awesome-typescript-loader": "^3.1.2",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "source-map-loader": "^0.2.1",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3"
+  }
+}
