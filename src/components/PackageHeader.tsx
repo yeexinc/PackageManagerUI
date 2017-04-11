@@ -18,10 +18,8 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
                     <img className="PackageIcon" src="/resources/icons/package.png"/>
                 </div>
                 <div className="PackageName">{pkg.name}</div>
-                <div className="PakcageRating">5</div>
-                <div className="PakcageIcon">
-                    <img className="PackageDownloadIcon" src="/resources/icons/download.png"/>
-                </div>
+                <div className="PackageRating">5</div>
+                <i className="fa fa-download"></i>
                 <div className="PackageDownload">{pkg.downloads}</div>
                 <div className="PackageDescription">{pkg.description}</div>
             </div>
