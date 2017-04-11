@@ -23,10 +23,12 @@ export class DetailedViewContainer extends React.Component<DetailedViewProps, De
         }
 
         this.beginDownloadPackage = this.beginDownloadPackage.bind(this);
+        this.beginDownloadPackage(this.props.packageId); // Begin download
     }
 
     beginDownloadPackage(packageId: string) {
 
+        let thisObject = this;
         fetch("/package/" + packageId)
             .then(function (response: Response) {
 
@@ -34,8 +36,8 @@ export class DetailedViewContainer extends React.Component<DetailedViewProps, De
 
             }).then(function (jsonString) {
 
-                this.activePackageJson = JSON.parse(jsonString);
-
+                thisObject.activePackageJson = JSON.parse(jsonString);
+                thisObject.setState({ packageJsonDownloaded: true });
             });
     }
 
