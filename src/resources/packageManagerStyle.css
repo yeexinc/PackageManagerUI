@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+.OuterMostContainer {
+    display: flex;
+    width: 100%;
+    align-content: stretch;
+}
+
+.LeftContainer {
+    background: cornflowerblue;
+}
+
+.RightContainer {
+    flex-grow: 1;
+    background: greenyellow;
+}
