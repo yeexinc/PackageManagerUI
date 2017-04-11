@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {InstallButtons} from './InstallButtons';
+import { InstallButtons } from './InstallButtons';
 
 export interface PackageVersionProps { pkg: any }
 export interface PackageVersionStates { selectedVerIndex: number }
 
 export function onPackageItemClick() {
-        this.setState({ selectedVerIndex: 0 })
+    this.setState({ selectedVerIndex: 0 })
 }
 
 export class PackageVersion extends React.Component<PackageVersionProps, PackageVersionStates> {
@@ -16,7 +16,7 @@ export class PackageVersion extends React.Component<PackageVersionProps, Package
         this.state = { selectedVerIndex: 0 }
     }
 
-    onVersionChange(event:any) {
+    onVersionChange(event: any) {
         this.setState({ selectedVerIndex: event.target.value });
     }
 
@@ -30,7 +30,7 @@ export class PackageVersion extends React.Component<PackageVersionProps, Package
         else {
             let versions = this.props.pkg.versions;
             let options: JSX.Element[] = [];
-            
+
             let worksWithDynamo = versions[this.state.selectedVerIndex].engine_version;
 
             for (let i = versions.length - 1; i >= 0; i--) {
@@ -39,12 +39,12 @@ export class PackageVersion extends React.Component<PackageVersionProps, Package
             }
 
             return (
-            <div className="VersionContainer">
-                <div className="VersionName">{this.props.pkg.name}</div>
-                <div className="VersionOptions"><select name="versions" onChange={this.onVersionChange.bind(this)}>{options}</select></div>
-                <div>Works with Dynamo {worksWithDynamo}</div>
-                <InstallButtons />
-            </div>);
+                <div className="VersionContainer">
+                    <div className="VersionName">{this.props.pkg.name}</div>
+                    <div className="VersionOptions"><select name="versions" onChange={this.onVersionChange.bind(this)}>{options}</select></div>
+                    <div>Works with Dynamo {worksWithDynamo}</div>
+                    <InstallButtons packageLink="" packageName="Foo" packageVersion="0.0.0" />
+                </div>);
 
         }
     }
