@@ -15,6 +15,13 @@ export class TabControl {
         ReactDOM.render(<TabComponent />, htmlElement);
     }
 
+    tabCaptions: string[] = [];
+    tabContents: JSX.Element[] = [];
+
+    insertTab(caption: string, content: JSX.Element) {
+        this.tabCaptions.push(caption);
+        this.tabContents.push(content);
+    }
 }
 
 fetch("/package/583d8ad8fdef23aa6e000037")
