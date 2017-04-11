@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as DownloadUtils from "../utils/DownloadUtils";
 
 export interface InstallButtonsProps {
     packageLink: string;
@@ -23,6 +24,7 @@ export class InstallButtons extends React.Component<InstallButtonsProps, Install
     }
 
     installPackage() {
+        DownloadUtils.downloadFile("");
     }
 
     updatePackage() {
