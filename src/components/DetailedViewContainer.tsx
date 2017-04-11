@@ -5,14 +5,13 @@ import{PackageVersion} from "./PackageVersion";
 import {PackageVersionDetail} from "./PackageVersionDetail";
 
 export interface DetailedViewProps {
-    pkg : any;
+  
+    packageId: string
 }
+
 export class DetailedViewContainer extends React.Component<DetailedViewProps, undefined> {
     render() {
-        return (<div>
-            
-                <PackageVersion pkg={this.props.pkg} />
-                
-            </div>);
+
+        return (<div>{ this.props.packageId }</div>);
     }
 }

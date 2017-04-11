@@ -14,7 +14,7 @@ function loadJsonFromFile(jsonPath, req, res) {
 }
 
 app.use(express.static(__dirname));
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     res.render("index.html");
 });
 
@@ -26,6 +26,6 @@ app.get("/package/583d8ad8fdef23aa6e000037", function (req, res) {
     loadJsonFromFile("./src/resources/data/583d8ad8fdef23aa6e000037.json", req, res);
 });
 
-app.listen(8080, function() {
+app.listen(8080, function () {
     console.log("Services listening on port 8080");
 });
