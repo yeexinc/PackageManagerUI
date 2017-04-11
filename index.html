@@ -15,11 +15,13 @@
 </head>
 
 <body>
+    <link rel="stylesheet" href="./src/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="./src/resources/packageManagerStyle.css" />
 
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
 
+    <i class="fa fa-download"></i>download icon 
     <!-- Placeholders must exist before all other scripts that try to access them -->
     <div class="OuterMostContainer">
         <div id="leftContentPlaceholder" class="LeftContainer">This space will host lib/pm</div>
@@ -44,6 +46,7 @@
         };
 
         let detailedView = new PackageManagerEntryPoint.DetailedView(detailedConfig);
+        detailedView.setActivePackageId("583d8ad8fdef23aa6e000037");
     </script>
 </body>
 

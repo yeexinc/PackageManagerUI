@@ -32,9 +32,15 @@ export interface DetailedViewConfig {
 
 export class DetailedView {
 
+    htmlElementId: string;
+
     constructor(config: DetailedViewConfig) {
-        let htmlElement = document.getElementById(config.htmlElementId);
-        ReactDOM.render(<DetailedViewContainer packageId="id goes here" />, htmlElement);
+        this.htmlElementId = config.htmlElementId;
+    }
+
+    setActivePackageId(packageId: string) {
+        let htmlElement = document.getElementById(this.htmlElementId);
+        ReactDOM.render(<DetailedViewContainer packageId={ packageId } />, htmlElement);
     }
 
 }
