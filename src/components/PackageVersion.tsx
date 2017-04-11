@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {InstallButtons} from './InstallButtons';
+import {PackageDetail} from "./PackageDetail"
 
 export interface PackageVersionProps { pkg: any }
 export interface PackageVersionStates { selectedVerIndex: number }
@@ -38,12 +39,17 @@ export class PackageVersion extends React.Component<PackageVersionProps, Package
                 options.push(<option value={index}>{versions[i].version}</option>);
             }
 
+            let dummyDependencies : string[] = ["foo"];
+            let packageDetail : JSX.Element = 
+                <PackageDetail changeLog="" content="" dependencies={dummyDependencies}/>
+
             return (
             <div className="VersionContainer">
                 <div className="VersionName">{this.props.pkg.name}</div>
                 <div className="VersionOptions"><select name="versions" onChange={this.onVersionChange.bind(this)}>{options}</select></div>
                 <div>Works with Dynamo {worksWithDynamo}</div>
                 <InstallButtons />
+                <div className="PackageDetailView">{packageDetail}</div>
             </div>);
 
         }
