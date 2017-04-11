@@ -10,6 +10,10 @@ body {
     background-color: black;
 }
 
+a {
+    color: white;
+}
+
 * {
     font-family: "Open Sans";
 }
@@ -139,10 +143,27 @@ body {
 {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .PackageName {
     font-size: 18pt;
+}
+
+.PackageCrumbles {
+    display: flex;
+    flex-direction: row;
+}
+
+.PackageCrumbles .AlignLeft {
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+}
+
+.PackageCrumbles .AlignRight {
+    text-align: right;
+    flex-grow: 1;
 }
 
 .DetailSectionHeader {

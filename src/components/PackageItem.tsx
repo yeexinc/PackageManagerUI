@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {InstallButtons} from './InstallButtons';
 
 export interface PackageItemProps {
     index: number, data: any, selected: boolean, setSelection: SetSelectionFunc
@@ -29,7 +30,6 @@ export class PackageItem extends React.Component<PackageItemProps, PackageItemSt
     render() {
         let pkg = this.props.data;
         let description: string = pkg.description;
-        let toggle: string = "";
         let selectedStyle = "ItemContainer ";
         selectedStyle += this.props.selected ? "ItemContainerSelected" : "ItemContainerBg";
 
@@ -54,7 +54,7 @@ export class PackageItem extends React.Component<PackageItemProps, PackageItemSt
                         <span className="ItemPackageVersion">{pkg.versions[0].version}</span><br />
                         <span className="ItemPackageAuthor">by {pkg.maintainers[0].username}</span>
                     </div>
-                    <div className="ItemToggleDescription" onClick={this.toggleExpandState}>{toggle}</div>
+                    <InstallButtons packageLink={undefined} packageName={pkg.name} packageVersion={pkg.versions[0].version}/>
                 </div>
             </div>
         );

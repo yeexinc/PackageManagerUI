@@ -32,9 +32,7 @@ export class StarRating extends React.Component<StarRatingProps, undefined>
         // Display stars on the page
         return (
             <div className="StarRating" >
-                <div className="ItemRightPanel">
-                    <div className="Stars">{stars}</div>
-                </div>
+                <div className="Stars">{stars}</div>
             </div>
         )
     }
