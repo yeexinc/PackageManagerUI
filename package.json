@@ -1,0 +1,24 @@
+{
+  "name": "dynamo-package-manager-ui",
+  "version": "1.0.0",
+  "description": "Dynamo Pakcage Manager UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DynamoDS/PackageManagerUI.git"
+  },
+  "keywords": [
+    "Dynamo",
+    "Package",
+    "Manager"
+  ],
+  "author": "DynamoDS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DynamoDS/PackageManagerUI/issues"
+  },
+  "homepage": "https://github.com/DynamoDS/PackageManagerUI#readme"
+}
