@@ -2,7 +2,7 @@ import * as React from 'react';
 import { PackageItem } from './PackageItem';
 import { PackageVersion } from './PackageVersion';
 
-export interface PackageListProps { packages: any[] }
+export interface PackageListProps { }
 export interface PackageListStates { packageJsonDownloaded: boolean, selectedIndex: number }
 
 export class PackageList extends React.Component<PackageListProps, PackageListStates> {
@@ -47,12 +47,12 @@ export class PackageList extends React.Component<PackageListProps, PackageListSt
         let index = 0;
         let pkgVersion = <div></div>;
         let pkgDetails = <div></div>;
-        console.log(this.props.packages);
 
-        let packageElements: JSX.Element[] = this.props.packages.map((pkg: any) =>
-            <PackageItem index={++index} data={pkg} selected={index == this.state.selectedIndex} setSelection={this.setSelection} />
-        );
+        // let packageElements: JSX.Element[] = this.props.packages.map((pkg: any) =>
+        //     <PackageItem index={++index} data={pkg} selected={index == this.state.selectedIndex} setSelection={this.setSelection} />
+        // );
 
-        return (<div>{packageElements}{pkgVersion}{pkgDetails}</div>);
+        // return (<div>{packageElements}{pkgVersion}{pkgDetails}</div>);
+        return (<div>Yeexin here</div>);
     }
 }
