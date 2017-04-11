@@ -17,3 +17,13 @@
     flex-grow: 1;
     background: greenyellow;
 }
+
+.VersionContainer {
+    font-family: 'Open Sans';
+    display:flex;
+    border: 1px solid #aaa;
+}
+
+.VersionContainer div {
+    padding: 5px;
+}
