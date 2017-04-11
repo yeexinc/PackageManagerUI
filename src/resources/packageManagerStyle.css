@@ -26,9 +26,11 @@ a {
 
 .InstallButtons {
     flex-grow: 1;
-    width: 100%;
-    height: 20pt;
-    background: cornflowerblue;
+    display: inline-block;
+    height: 15pt;
+    background: #64ed81;
+    margin: 1pt;
+    text-align: center;
 }
 
 .LeftContainer {
