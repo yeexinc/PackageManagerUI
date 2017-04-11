@@ -18,21 +18,11 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
         if (pkg.site_url === "") site = undefined;
         
         let repo = <a href={pkg.repository_url}>Repository</a>;
-        if (pkg.repository_url === "") repo = undefined;
-
+        if (pkg.repository_url === "") {
+            repo = undefined;
+        }
         let separator = (pkg.site_url === "" || pkg.repository_url === "") ? "" : " | ";
-        
         let starRating = <StarRating rate={rate} />;
-
-        //let urlLink = (pkg.site_url !== "") ? (<a href={pkg.site_url}>Website</a>) : "";
-        //let repoLink = (pkg.repository_url !== "") ? (<a href={pkg.repository_url}>Repo</a>) : "";
-        //let separator = (pkg.site_url !== "" && pkg.repository_url !== "") ? " | " : "";
-        //let links = urlLink + separator + repoLink;
-
-        //console.log(urlLink);
-        //console.log(repoLink);
-        //console.log(separator);
-        //console.log(links);
 
         return (
             <div className="PackageHeaderInfo">
@@ -55,6 +45,7 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
                         </div>
                         <div className="AlignRight">{site}{separator}{repo}</div>
                     </div>
+                    <div className="PackageDescription">{pkg.description}</div>
                 </div>
                 
             </div>
