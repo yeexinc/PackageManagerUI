@@ -116,17 +116,19 @@ a {
 
 .VersionContainer {
     font-family: 'Open Sans';
-    display:flex;
-    border: 1px solid #aaa;
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
 }
 
 .VersionBar {
+    display: flex;
     flex-direction: row;
+    width: 100%;
+    border-bottom: #888 1px solid;
 }
 
-.VersionContainer div {
-    padding: 5px;
+.VersionBar div {
+    flex-grow: 1;
 }
 
 .PackageHeaderInfo {
@@ -152,6 +154,15 @@ a {
     font-size: 18pt;
 }
 
+.PackageAuthor {
+    color: #aaa;
+}
+
+.StarRating {
+    display: flex;
+    flex-direction: row;
+}
+
 .PackageCrumbles {
     display: flex;
     flex-direction: row;
@@ -173,6 +184,10 @@ a {
     font-size: 11pt;
     text-transform: uppercase;
     color: #888;
+}
+
+.DetailSection, .PackageDescription {
+    margin: 10px 0px 10px 0px;
 }
 
 .SearchBarContainer {

@@ -1,7 +1,6 @@
 .DS_Store
 
 # Distributables
-dist/
 
 # Logs
 logs
