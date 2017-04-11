@@ -12,7 +12,7 @@ export class PackageVersionDetail extends React.Component<PackageVersionDetailPr
     }
 
     render() {
-        let deps = this.props.dependencies.map((dep:string) => <li>dep</li>)
+        let deps = this.props.dependencies.map((dep:string) => <li>dep</li>);
         return (
             <div className="Detail">
                 <div className="DetailSectionHeader">What's New:</div>
@@ -22,7 +22,7 @@ export class PackageVersionDetail extends React.Component<PackageVersionDetailPr
                 <div className="DetailSectionHeader">Dependencies</div>
                 <div className="DetailSection"><ul>{deps}</ul></div>
                 <div className="DetailSectionHeader">Content of Package</div>
-                <div className="DetailSection">{this.props.content}</div>
+                <div className="DetailSection">{this.props.content.name}</div>
             </div>);
     }
 }
