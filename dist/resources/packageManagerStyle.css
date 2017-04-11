@@ -24,11 +24,21 @@ a {
     align-content: stretch;
 }
 
+.InstallButtonGroup {
+    display: flex;
+    flex-direction: row;
+}
+
 .InstallButtons {
     flex-grow: 1;
-    width: 100%;
-    height: 20pt;
-    background: cornflowerblue;
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    border: white 1.5px solid;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 11pt;
 }
 
 .LeftContainer {
@@ -114,17 +124,24 @@ a {
 
 .VersionContainer {
     font-family: 'Open Sans';
-    display:flex;
-    border: 1px solid #aaa;
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
 }
 
 .VersionBar {
+    display: flex;
     flex-direction: row;
 }
 
-.VersionContainer div {
-    padding: 5px;
+.VersionBarInfo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /*border-bottom: #888 1px solid;*/
+}
+
+.VersionBarInfo .VersionBarColumn {
+    flex-grow: 1;
 }
 
 .PackageHeaderInfo {
@@ -150,6 +167,15 @@ a {
     font-size: 18pt;
 }
 
+.PackageAuthor {
+    color: #aaa;
+}
+
+.StarRating {
+    display: flex;
+    flex-direction: row;
+}
+
 .PackageCrumbles {
     display: flex;
     flex-direction: row;
@@ -171,6 +197,10 @@ a {
     font-size: 11pt;
     text-transform: uppercase;
     color: #888;
+}
+
+.DetailSection, .PackageDescription {
+    margin: 10px 0px 10px 0px;
 }
 
 .SearchBarContainer {

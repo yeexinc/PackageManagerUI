@@ -76,7 +76,7 @@ export class SearchBar extends React.Component<SortButtonProps, SortButtonState>
             <div className="SearchBarContainer">
                 <input className="SearchInput" type="search" />
                 <div className="SearchOptionsContainer">
-                    <img className={this.state.expanded? "IconHighlight" : "Icon"} src="/src/resources/icons/sort-button.png" onClick={this.onSortButtonClick.bind(this)} />
+                    <img className={this.state.expanded? "IconHighlight" : "Icon"} src="./dist/resources/icons/sort-button.png" onClick={this.onSortButtonClick.bind(this)} />
                     {options}
                 </div>
             </div>

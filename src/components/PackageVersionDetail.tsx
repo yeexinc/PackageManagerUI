@@ -18,7 +18,7 @@ export class PackageVersionDetail extends React.Component<PackageVersionDetailPr
                 <div className="DetailSectionHeader">What's New</div>
                 <div className="DetailSection">{this.props.changeLog}</div>
                 <div className="DetailSectionHeader">Known Issues</div>
-                <div className="DetailSection">No</div>
+                <div className="DetailSection"></div>
                 <div className="DetailSectionHeader">Dependencies</div>
                 <div className="DetailSection"><ul>{deps}</ul></div>
                 <div className="DetailSectionHeader">Package Contents</div>

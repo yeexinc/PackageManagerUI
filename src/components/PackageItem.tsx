@@ -46,7 +46,7 @@ export class PackageItem extends React.Component<PackageItemProps, PackageItemSt
         return (
             <div className={selectedStyle} onClick={this.onItemContainerClicked.bind(this)}>
                 <div className="ItemLeftPanel">
-                    <img src="/src/resources/icons/package.png" />
+                    <img src="/dist/resources/icons/package.png" />
                 </div>
                 <div className="ItemRightPanel">
                     <div className="PackageCaption">

@@ -56,9 +56,11 @@ export class PackageVersion extends React.Component<PackageVersionProps, Package
         return (
             <div className="VersionContainer">
                 <div className="VersionBar">
-                    <div className="VersionName">{this.props.pkg.name}</div>
-                    <div className="VersionOptions"><select name="versions" onChange={this.onVersionChange.bind(this)}>{options}</select></div>
-                    <div>Works with Dynamo {versions == null ? "" : versions[this.state.selectedVerIndex].engine_version}</div>
+                    <div className="VersionBarInfo">
+                        <div className="VersionBarColumn">{this.props.pkg.name}</div>
+                        <div className="VersionBarColumn"><select name="versions" onChange={this.onVersionChange.bind(this)}>{options}</select></div>
+                        <div className="VersionBarColumn">Works with Dynamo {versions == null ? "" : versions[this.state.selectedVerIndex].engine_version}</div>
+                    </div>
                     <InstallButtons packageLink="" packageName="Foo" packageVersion="0.0.0" />
                 </div>
                 <div className="PackageDetailView">{packageDetail}</div>
