@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom";
 
 import { TabComponent } from "./components/TabComponent";
 import { PackageDetail } from "./components/packageDetail";
+import { DetailedViewContainer } from "./components/DetailedViewContainer";
 
 export interface TabControlConfig {
     htmlElementId: string
@@ -17,16 +18,33 @@ export class TabControl {
 
 }
 
-fetch("/package/583d8ad8fdef23aa6e000037")
-    .then(function (response: Response) {
-        return response.text();
-    }).then(function (jsonString) {
+export interface DetailedViewConfig {
+    htmlElementId: string
+}
 
-        let completeJson = JSON.parse(jsonString);
-        let dependencies: string[] = ["qux", "quz"];
+export class DetailedView {
 
-        ReactDOM.render(
-            <PackageDetail changeLog="foo" content={completeJson.content} dependencies={dependencies} />,
-            document.getElementById("packageDetailPlaceHolder")
-        );
-    });
+    constructor(config: DetailedViewConfig) {
+        let htmlElement = document.getElementById(config.htmlElementId);
+        ReactDOM.render(<DetailedViewContainer packageId="id goes here" />, htmlElement);
+    }
+
+}
+
+export function DoSomeFancyStuff() {
+
+    fetch("/package/583d8ad8fdef23aa6e000037")
+        .then(function (response: Response) {
+            return response.text();
+        }).then(function (jsonString) {
+
+            let completeJson = JSON.parse(jsonString);
+            let dependencies: string[] = ["qux", "quz"];
+
+            ReactDOM.render(
+                <PackageDetail changeLog="foo" content={completeJson.content} dependencies={dependencies} />,
+                document.getElementById("packageDetailPlaceHolder")
+            );
+        });
+}
+

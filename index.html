@@ -30,13 +30,19 @@
     <script src='./dist/bundle.js'></script>
 
     <script>
-        let configuration = {
+        let tabControlConfig = {
             htmlElementId: "leftContentPlaceholder"
         };
 
-        let tabControl = new PackageManagerEntryPoint.TabControl(configuration);
-        tabControl.insertTab("Library", null);
-        tabControl.insertTab("Packages", null);
+        let tabControl = new PackageManagerEntryPoint.TabControl(tabControlConfig);
+        // tabControl.insertTab("Library", null);
+        // tabControl.insertTab("Packages", null);
+
+        let detailedConfig = {
+            htmlElementId: "rightContentPlaceholder"
+        };
+
+        let detailedView = new PackageManagerEntryPoint.DetailedView(detailedConfig);
     </script>
 </body>
 
