@@ -47,7 +47,6 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
                             <div className="AlignRight">{site}{separator}{repo}</div>
                         </div>
                     </div>
-                    <div className="PackageDescription">{pkg.description}</div>
                 </div>
                 <div className="PackageDescription">{pkg.description}</div>
             </div>
