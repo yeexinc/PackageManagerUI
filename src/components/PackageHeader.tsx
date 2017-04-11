@@ -13,6 +13,8 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
     render() {
         let pkg = this.props.pkg;
         let rate = 4.6;
+        let site = <a href={pkg.site_url}>Website</a>;
+        let repo = <a href={pkg.repository_url}>Repo</a>;
         let starRating = <StarRating rate={rate} />;
 
         return (
@@ -26,6 +28,7 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
                     <div className="PackageName">{pkg.name}</div>
                 </div>
                 <div className="PackageName">{pkg.name}</div>
+                <div className="PackageAuthor">by {pkg.maintainers[0].username}</div>
                 {starRating}
                 <div className="PackageDownload">
                     <i className="fa fa-download" />
@@ -33,6 +36,7 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
                     ({pkg.votes}<i className="fa fa-users"/>)
                 </div>
                 <div className="PackageDescription">{pkg.description}</div>
+                <div>{site} | {repo}</div>
             </div>
         );
     }
