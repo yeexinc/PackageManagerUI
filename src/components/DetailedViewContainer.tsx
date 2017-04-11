@@ -2,12 +2,11 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 export interface DetailedViewProps {
-    packages : any;
+    packageId: string
 }
+
 export class DetailedViewContainer extends React.Component<DetailedViewProps, undefined> {
     render() {
-        return (<div>
-                this.props.packages[0].name;
-            </div>);
+        return (<div>{ this.props.packageId }</div>);
     }
 }

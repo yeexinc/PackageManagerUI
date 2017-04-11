@@ -1,13 +1,13 @@
 import * as React from "react";
 
-export interface PackageDetailProps {
+export interface PackageVersionDetailProps {
     changeLog: string;
     content: any;
     dependencies: string[];
 }
 
-export class PackageDetail extends React.Component<PackageDetailProps, undefined> {
-    constructor(detail: PackageDetailProps) {
+export class PackageVersionDetail extends React.Component<PackageVersionDetailProps, undefined> {
+    constructor(detail: PackageVersionDetailProps) {
         super(detail);
     }
 
