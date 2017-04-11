@@ -19,7 +19,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/packages", function(req, res) {
-  loadJsonFromFile("./resources/data/packages.json", req, res);
+  loadJsonFromFile("./src/resources/data/packages.json", req, res);
 });
 
 app.get("/package/583d8ad8fdef23aa6e000037", function (req, res) {

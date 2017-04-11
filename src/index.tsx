@@ -3,6 +3,8 @@ import * as ReactDOM from "react-dom";
 
 import { TabComponent } from "./components/TabComponent";
 
+import{DetailedViewContainer} from "./components/DetailedViewContainer"
+
 export interface TabControlConfig {
     htmlElementId: string
 }
@@ -28,4 +30,12 @@ fetch("/package/583d8ad8fdef23aa6e000037")
         return response.text();
     }).then(function (jsonString) {
         let completeJson = JSON.parse(jsonString);
-    });
+    
+        let dependencies : string[] = ["qux", "quz"];
+        let pkg = completeJson.content;
+
+        ReactDOM.render(
+            <DetailedViewContainer pkg={pkg}/>,
+            document.getElementById("rightContentPlaceholder")
+        );
+});
