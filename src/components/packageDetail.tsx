@@ -15,13 +15,15 @@ export class PackageDetail extends React.Component<PackageDetailProps, undefined
     render() {
         return (
             <div className="Detail">
-                <div className="DetailSectionHeader">What's New:</div>
+                <div className="DetailSectionHeader">Description</div>
+                <div className="DetailSection">{this.props.content.description}</div>
+                <div className="DetailSectionHeader">What's New</div>
                 <div className="DetailSection">{this.props.content.versions[0].change_log}</div>
-                <div className="DetailSectionHeader">KnownIssue</div>
+                <div className="DetailSectionHeader">Known Issues</div>
                 <div className="DetailSection"></div>
                 <div className="DetailSectionHeader">Dependencies</div>
                 <div className="DetailSection"></div>
-                <div className="DetailSectionHeader">Content of Package</div>
+                <div className="DetailSectionHeader">Package Contents</div>
                 <div className="DetailSection"></div>
             </div>);
     }
