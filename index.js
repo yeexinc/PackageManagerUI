@@ -18,6 +18,10 @@ app.get("/", function(req, res) {
     res.render("index.html");
 });
 
+app.get("/packages", function(req, res) {
+  loadJsonFromFile("./resources/data/packages.json", req, res);
+});
+
 app.get("/package/583d8ad8fdef23aa6e000037", function (req, res) {
     loadJsonFromFile("./src/resources/data/583d8ad8fdef23aa6e000037.json", req, res);
 });
