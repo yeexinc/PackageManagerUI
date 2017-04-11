@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #353535;
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="./src/resources/packageManagerStyle.css" />
+
+    <div id="contentPlaceholder" class="OuterMostContainer"></div>
+
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src='./dist/bundle.js'></script>
+
+    <script>
+        let configuration = {
+            htmlElementId: "contentPlaceholder"
+        };
+
+        let tabControl = new PackageManagerEntryPoint.TabControl(configuration);
+        tabControl.insertTab("Library", null);
+        tabControl.insertTab("Packages", null);
+    </script>
+
+</body>
+
+</html>
