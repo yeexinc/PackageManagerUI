@@ -31,17 +31,19 @@ export class PackageVersion extends React.Component<PackageVersionProps, Package
         else {
             let versions = this.props.pkg.versions;
             let options: JSX.Element[] = [];
-
-            let worksWithDynamo = versions[this.state.selectedVerIndex].engine_version;
+            let selectedVersion = versions[this.state.selectedVerIndex];
+            let worksWithDynamo = selectedVersion.engine_version;
 
             for (let i = versions.length - 1; i >= 0; i--) {
                 let index = versions.length - 1 - i;
                 options.push(<option value={index}>{versions[i].version}</option>);
             }
 
-            let dummyDependencies : string[] = ["foo"];
+            let change_log = selectedVersion.change_log;
+            let content = selectedVersion.content;
+            let deps : string[] = selectedVersion.full_dependency_ids.map((dep:any) => dep.name);
             let packageDetail : JSX.Element = 
-                <PackageDetail changeLog="" content="" dependencies={dummyDependencies}/>
+                <PackageDetail changeLog={change_log} content={content} dependencies={deps}/>
 
             return (
             <div className="VersionContainer">
