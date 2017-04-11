@@ -25,7 +25,7 @@ export class TabComponent extends React.Component<undefined, TabComponentState> 
     }
 
     render() {
-        let urls=["/src/resources/icons/tab-package.svg", "/src/resources/icons/tab-library.svg"];
+        let urls=["/dist/resources/icons/tab-package.svg", "/dist/resources/icons/tab-library.svg"];
         let toolTips=["library view","package view"];
         let selectedIndex=0;
         return (
