@@ -21,7 +21,7 @@ export class PackageHeader extends React.Component<PackageHeaderProps, undefined
             <div className="PackageHeaderInfo">
                 <div className="PackageHeaderInfoLeftPanel">
                     <div className="PackageIcon">
-                        <img className="PackageIcon" src="./src/resources/icons/package.png" />
+                        <img className="PackageIcon" src="./dist/resources/icons/package.png" />
                     </div>
                 </div>
                 <div className="PackageHeaderInfoRightPanel">
