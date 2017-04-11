@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: white;
+    background-color: black;
+}
+
+* {
+    font-family: "Open Sans";
+}
+
+.OuterMostContainer {
+    display: flex;
+    width: 100%;
+    align-content: stretch;
+}
+
+.InstallButtons {
+    flex-grow: 1;
+    width: 100%;
+    background: cornflowerblue;
+}
+
+.LeftContainer {
+    background: #353535;
+    padding: 10px;
+}
+
+.RightContainer {
+    flex-grow: 1;
+    background: #555;
+    padding: 10px;
+}
+
+.VersionContainer {
+    font-family: 'Open Sans';
+    display:flex;
+    border: 1px solid #aaa;
+}
+
+.VersionContainer div {
+    padding: 5px;
+}
+
+.DetailSectionHeader {
+    margin: 6px 0px;
+    font-size: 11pt;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.DetailSection {
+    margin-bottom: 21px;
+}
