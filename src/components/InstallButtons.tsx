@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as DownloadUtils from "../utils/DownloadUtils";
 
 export interface InstallButtonsProps {
     packageLink: string;
@@ -23,6 +24,9 @@ export class InstallButtons extends React.Component<InstallButtonsProps, Install
     }
 
     installPackage() {
+        DownloadUtils.downloadFile("");
+        let state = this.state;
+        this.setState({installed: true, hasUpdate: state.hasUpdate});
     }
 
     updatePackage() {
@@ -33,7 +37,7 @@ export class InstallButtons extends React.Component<InstallButtonsProps, Install
 
     render() {
         if (!this.state.installed) {
-            return (<div className="InstallButtons" onClick={ this.installPackage }>INSTALL</div>);
+            return (<div><div className="InstallButtons" onClick={ this.installPackage }>INSTALL</div></div>);
         }
         else {
             return (<div>

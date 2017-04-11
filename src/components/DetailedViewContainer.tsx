@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom";
 
 import{PackageVersion} from "./PackageVersion";
 import {PackageVersionDetail} from "./PackageVersionDetail";
+import { PackageHeader } from "./PackageHeader";
 
 export interface DetailedViewProps {
   
@@ -51,6 +52,9 @@ export class DetailedViewContainer extends React.Component<DetailedViewProps, De
 
         let dependencies = ["jaz", "juice"];
         let content = this.activePackageJson.content;
-        return (<PackageVersionDetail changeLog="foo" content={content} dependencies={dependencies} />);
+        return (<div id="DetailedViewContainer">
+                    <PackageHeader pkg={content} />
+                    <PackageVersion pkg={content}/>
+                </div>);
     }
 }

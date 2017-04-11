@@ -1,8 +1,15 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { SearchBar } from "./SearchBar";
+import { PackageList } from './PackageList';
+import { TabHeader } from "./TabHeader";
 
-export class TabComponent extends React.Component<undefined, undefined> {
+export interface TabComponentState {
+    selectedIndex : number;
+}
+
+export class TabComponent extends React.Component<undefined, TabComponentState> {
 
     tabCaptions: string[] = [];
     tabContents: JSX.Element[] = [];
@@ -12,8 +19,21 @@ export class TabComponent extends React.Component<undefined, undefined> {
         this.tabContents.push(content);
     }
 
+    setTabSelection(index:number)
+    {
+        this.setState({selectedIndex:index});
+    }
+
     render() {
-        return (<div>This will be an awesome tab control...</div>);
+        let urls=["/src/resources/icons/tab-package.svg", "/src/resources/icons/tab-library.svg"];
+        let toolTips=["library view","package view"];
+        let selectedIndex=0;
+        return (
+            <div>
+                <TabHeader iconUrls={urls} toolTips={toolTips} selectionFunc={this.setTabSelection}/>
+                <SearchBar />
+                <PackageList />
+            </div>);
     }
 
 }

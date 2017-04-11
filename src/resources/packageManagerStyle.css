@@ -10,6 +10,10 @@ body {
     background-color: black;
 }
 
+a {
+    color: white;
+}
+
 * {
     font-family: "Open Sans";
 }
@@ -23,12 +27,14 @@ body {
 .InstallButtons {
     flex-grow: 1;
     width: 100%;
+    height: 20pt;
     background: cornflowerblue;
 }
 
 .LeftContainer {
     background: #353535;
     padding: 10px;
+    min-width: 250px;
 }
 
 .RightContainer {
@@ -37,29 +43,242 @@ body {
     padding: 10px;
 }
 
+.MainCaption {
+    font-family: "Open Sans";
+    color: #0000ff;
+}
+
+.ItemContainer {
+    font-family: "Open Sans";
+    display:flex;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+
+.ItemContainerBg {
+    border: 1px solid #ffe4b5;
+    background-color: #ffe4b5;
+}
+
+.ItemContainer:hover {
+    border: 1px solid #e9967a;
+    background-color: #e9967a;
+}
+
+.ItemContainerSelected {
+    border: 1px solid sandybrown;
+    background-color: sandybrown;
+}
+
+.ItemLeftPanel {
+    padding:5px;
+}
+
+.ItemRightPanel {
+    padding:5px;
+    background-color:#555;
+    width:100%;
+}
+
+.ItemRightPanelSelected {
+    padding:5px;
+    background-color:#ddd;
+    width:100%;
+}
+
+.ItemPackageName {
+    font-size:0.9em;
+    line-height:0.9em;
+}
+
+.ItemPackageVersion {
+    font-size:0.6em;
+    margin-left:5px;
+}
+
+.ItemPackageAuthor {
+    font-size:0.6em;
+    color:#aaa;
+}
+
+.ItemToggleDescription {
+    float: right;
+    font-size:0.7em;
+    color:#aaaaaa;
+}
+
+.ItemToggleDescription:hover {
+    cursor:pointer;
+    border-bottom:1px solid #aaa;
+}
+
 .VersionContainer {
     font-family: 'Open Sans';
     display:flex;
     border: 1px solid #aaa;
+    flex-direction: column; 
+}
+
+.VersionBar {
+    flex-direction: row;
 }
 
 .VersionContainer div {
     padding: 5px;
 }
 
+.PackageHeaderInfo {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    border-bottom: #888 1px solid;
+}
+
+.PackageDetailContainer {
+    margin: 10px 0px;
+    flex-direction: column;
+}
+
+.PackageHeaderInfoRightPanel
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PackageName {
+    font-size: 18pt;
+}
+
+.PackageCrumbles {
+    display: flex;
+    flex-direction: row;
+}
+
+.PackageCrumbles .AlignLeft {
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+}
+
+.PackageCrumbles .AlignRight {
+    text-align: right;
+    flex-grow: 1;
+}
+
 .DetailSectionHeader {
-    margin: 6px 0px;
+    margin: 18px 0px 6px 0px;
     font-size: 11pt;
     text-transform: uppercase;
     color: #888;
 }
 
-.DetailSection {
-    margin-bottom: 21px;
+.SearchBarContainer {
+    height: 40px;
+    background: grey;
+    display: flex;
+    justify-content: space-between;
 }
 
+.SearchInput {
+    width: 100%;
+    display: flex;
+    padding: 0px 0px 0px 5px;
+    font-size: 15px;
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.SearchOptionsContainer {
+    display: flex;
+    position: relative;
+}
+
+.SearchBarContainer .Icon {
+    height: 20px;
+    width: 20px;
+    display: block;
+    padding: 10px;
+}
+
+.SearchBarContainer .IconHighlight {
+    height: 20px;
+    width: 20px;
+    display: block;
+    padding: 10px;
+    background: #5b5b5b;
+}
+
+.SearchBarContainer .Icon:hover, .SearchBarContainer .IconHighlight {
+    cursor: pointer;
+    background: #5b5b5b;
+    -webkit-transition: all 0.25s linear;
+}
+
+.SearchBarContainer .Options {
+    float: right;
+    background: grey;
+    color: white;
+    position: absolute;
+    right: 0px;
+    top: 45px;
+}
+
+.SearchBarContainer .Options .Line {
+    border: 1px solid #dbdbdb;
+}
+
+.SearchBarContainer .Options .SortBy{
+    padding: 10px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.SearchBarContainer .Options .OrderBy {
+    padding: 10px;
+    font-size: 13px;
+    font-style: italic;
+    border-top: 1px solid white;
+}
+
+.SearchBarContainer .Options ul {
+    margin: 0px;
+    padding: 0px;
+    background: transparent;
+}
+
+.SearchBarContainer .Options li{
+    display: block;
+    padding: 10px;
+    width: 200px;
+    line-height: 12px;
+    font-size: 13px;
+}
+
+.SearchBarContainer .Options li:hover, .Options .OptionTextHighlight{
+    background: #606060;
+    color: white;
+    cursor: pointer;
+     -webkit-transition: all 0.25s linear;
+}
+
+.TabHeader {
+    display: flex;
+}
 .tooltip {
     visibility: hidden;
+    font-size: 12px;
+    display: block;
+    position: fixed;
+}
+.Tab{
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50px;
+    
 }
 
 .Tab:hover .tooltip{
