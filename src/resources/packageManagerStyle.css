@@ -57,3 +57,11 @@ body {
 .DetailSection {
     margin-bottom: 21px;
 }
+
+.tooltip {
+    visibility: hidden;
+}
+
+.Tab:hover .tooltip{
+    visibility: visible;
+}
