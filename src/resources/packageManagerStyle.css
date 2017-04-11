@@ -37,6 +37,75 @@ body {
     padding: 10px;
 }
 
+.MainCaption {
+    font-family: "Open Sans";
+    color: #0000ff;
+}
+
+.ItemContainer {
+    font-family: "Open Sans";
+    display:flex;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+
+.ItemContainerBg {
+    border: 1px solid #ffe4b5;
+    background-color: #ffe4b5;
+}
+
+.ItemContainer:hover {
+    border: 1px solid #e9967a;
+    background-color: #e9967a;
+}
+
+.ItemContainerSelected {
+    border: 1px solid sandybrown;
+    background-color: sandybrown;
+}
+
+.ItemLeftPanel {
+    padding:5px;
+}
+
+.ItemRightPanel {
+    padding:5px;
+    background-color:#555;
+    width:100%;
+}
+
+.ItemRightPanelSelected {
+    padding:5px;
+    background-color:#ddd;
+    width:100%;
+}
+
+.ItemPackageName {
+    font-size:0.9em;
+    line-height:0.9em;
+}
+
+.ItemPackageVersion {
+    font-size:0.6em;
+    margin-left:5px;
+}
+
+.ItemPackageAuthor {
+    font-size:0.6em;
+    color:#aaa;
+}
+
+.ItemToggleDescription {
+    float: right;
+    font-size:0.7em;
+    color:#aaaaaa;
+}
+
+.ItemToggleDescription:hover {
+    cursor:pointer;
+    border-bottom:1px solid #aaa;
+}
+
 .VersionContainer {
     font-family: 'Open Sans';
     display:flex;

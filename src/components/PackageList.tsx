@@ -42,14 +42,11 @@ export class PackageList extends React.Component<PackageListProps, PackageListSt
         }
 
         let index = 0;
-        let pkgVersion = <div></div>;
-        let pkgDetails = <div></div>;
 
-        // let packageElements: JSX.Element[] = this.props.packages.map((pkg: any) =>
-        //     <PackageItem index={++index} data={pkg} selected={index == this.state.selectedIndex} setSelection={this.setSelection} />
-        // );
+        let packageElements: JSX.Element[] = this.activePackageJson.content.map((pkg: any) =>
+             <PackageItem index={++index} data={pkg} selected={index == this.state.selectedIndex} setSelection={this.setSelection} />
+        );
 
-        // return (<div>{packageElements}{pkgVersion}{pkgDetails}</div>);
-        return (<div>(Render Package items here)</div>);
+        return (<div>{packageElements}</div>);
     }
 }
