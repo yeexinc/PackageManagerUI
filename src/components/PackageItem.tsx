@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {InstallButtons} from './InstallButtons';
+import {StarRating} from './StarRating';
 
 export interface PackageItemProps {
     index: number, data: any, selected: boolean, setSelection: SetSelectionFunc
@@ -54,6 +55,7 @@ export class PackageItem extends React.Component<PackageItemProps, PackageItemSt
                         <span className="ItemPackageVersion">{pkg.versions[0].version}</span><br />
                         <span className="ItemPackageAuthor">by {pkg.maintainers[0].username}</span>
                     </div>
+                    <StarRating rate={4}/>
                     <InstallButtons packageLink={undefined} packageName={pkg.name} packageVersion={pkg.versions[0].version}/>
                 </div>
             </div>
